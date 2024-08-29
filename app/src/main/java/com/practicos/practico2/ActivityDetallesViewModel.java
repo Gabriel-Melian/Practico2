@@ -11,4 +11,5 @@ public class ActivityDetallesViewModel extends AndroidViewModel {
     public ActivityDetallesViewModel(@NonNull Application application) {
         super(application);
     }
+
 }

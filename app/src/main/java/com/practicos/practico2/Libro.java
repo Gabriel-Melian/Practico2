@@ -25,8 +25,15 @@ public class Libro implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public Libro() {
-
+    public Libro(String titulo, int foto) {
+    this.titulo = titulo;
+    this.foto = foto;
+    this.anio=0;
+    this.autor="";
+    this.categoria="";
+    this.descripcion="";
+    this.genero="";
+    this.paginas=0;
     }
 
     public String getTitulo() {
@@ -91,5 +98,19 @@ public class Libro implements Serializable {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", paginas=" + paginas +
+                ", anio=" + anio +
+                ", genero='" + genero + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", foto=" + foto +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
     }
 }
