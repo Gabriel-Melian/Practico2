@@ -61,7 +61,7 @@ public class MainActivityViewModel extends AndroidViewModel {
                 "Una obra clásica que relata las aventuras de Bilbo Bolsón en su viaje para recuperar un tesoro custodiado por un dragón."
         );
 
-        /*Libro got2 = new Libro(
+        /*Libro got2 = new Libro(//Aca queria implementar lista
                 "Game of Thrones Saga",
                 "George R. R. Martin",
                 694,
@@ -88,8 +88,15 @@ public class MainActivityViewModel extends AndroidViewModel {
 
         Libro buscado = null;
 
-        for (Libro x : libros) {
-            if (x.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
+        //for (Libro x : libros) {//Antes
+            //if (x.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
+                //buscado = new Libro(x.getTitulo(),x.getAutor(),x.getPaginas(),x.getAnio(),x.getGenero(),x.getCategoria(),x.getFoto(),x.getDescripcion());
+                //break;
+            //}
+        //}
+
+        for (Libro x : libros) {//Despues
+            if (x.getTitulo().equalsIgnoreCase(titulo)) {
                 buscado = new Libro(x.getTitulo(),x.getAutor(),x.getPaginas(),x.getAnio(),x.getGenero(),x.getCategoria(),x.getFoto(),x.getDescripcion());
                 break;
             }
